@@ -10,18 +10,18 @@
 // My Solutions: Hack method way, simple for loop
 // Remember: Your solution should return a boolean.
 
-// function palindrome(str) {
-//     const strRev = str.split('').reverse().join('');
-//     return str === strRev;
-// }
+function palindrome(str) {
+    const strRev = str.split('').reverse().join('');
+    return str === strRev;
+}
 
-// function palindrome(str) {
-//     const strRev = '';
-//     for (let i = str.length -1; i >= 0; i--) {
-//         strRev += str[i];
-//     }
-//     return str === strRev;
-// }
+function palindrome(str) {
+    const strRev = '';
+    for (let i = str.length -1; i >= 0; i--) {
+        strRev += str[i];
+    }
+    return str === strRev;
+}
 
 // Alternate Solution with every array helper
 // Technically not idea, because you are doing twice as much work than necessary
