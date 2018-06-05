@@ -50,7 +50,7 @@ function maxChar(str) {
         charMap[char] ? charMap[char]++ : charMap[char] = 1;
     //alternative line with short or statement
     //for charMap at key char, if adding 1 results in null value (falsy), instead, assign value of 1
-        charMap[char] = charMap[char] + 1 || 1;
+        // charMap[char] = charMap[char] + 1 || 1;
     }
     for (let char in charMap) {
         if (charMap[char] > maxNum) {
