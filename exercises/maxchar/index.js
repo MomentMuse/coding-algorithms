@@ -9,11 +9,14 @@
 // and then iterate over object properties to determine values and find the most frequent property, or char
 
 function maxChar(str) {
+//crate empty object to store character map    
     const charMap = {};
 //define variables for for in loop iteration    
     let maxValue = 0;
     let maxChar = '';
+//for of loop, iterating over arrays or strings
     for (let char of str) {
+//fill character map object
 //if property char of object charMap exists, increment by one
         if (charMap[char]) {
             charMap[char]++;
@@ -24,12 +27,15 @@ function maxChar(str) {
     }
 //iterate through object with for in loop
     for (let char in charMap) {
+//if key char's corresponding value is greater than max value
         if (charMap[char] > maxValue) {
+//assign new max value
             maxValue = charMap[char];
+//assign new max character (key)
             maxChar = char;
         }
     }
-//after iteration, maxChar will be assigned the property with mxValue
+//after iteration, maxChar will be assigned the property with maxValue
     return maxChar;
 }
 
@@ -42,6 +48,9 @@ function maxChar(str) {
     let maxChar = '';
     for (let char of str) {
         charMap[char] ? charMap[char]++ : charMap[char] = 1;
+    //alternative line with short or statement
+    //for charMap at key char, if adding 1 results in null value (falsy), instead, assign value of 1
+        charMap[char] = charMap[char] + 1 || 1;
     }
     for (let char in charMap) {
         if (charMap[char] > maxNum) {
